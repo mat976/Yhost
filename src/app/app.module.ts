@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginButtonComponent } from './login-button/login-button.component';
-import { BodyComponent } from './sidebar/body/body.component';
+import { BodyComponent } from './sidenav/body/body.component';
 import { CoupensComponent } from './sidenav/coupens/coupens.component';
 import { DashboardComponent } from './sidenav/dashboard/dashboard.component';
 import { MediaComponent } from './sidenav/media/media.component';

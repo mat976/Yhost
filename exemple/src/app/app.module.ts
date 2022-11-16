@@ -8,6 +8,7 @@ import { HelloWorldNgIfComponent } from './hello-world-ngif/hello-world-ngif.com
 import { HelloWorldDependencyInjectionComponent } from './hello-world-di/hello-world-di.component';
 import { HelloWorldInterpolationComponent } from './hello-world-interpolation/hello-world-interpolation.component';
 import { HelloWorldBindingsComponent } from './hello-world-bindings/hello-world-bindings.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 
@@ -19,7 +20,8 @@ import { HelloWorldBindingsComponent } from './hello-world-bindings/hello-world-
     HelloWorldNgIfComponent,
     HelloWorldDependencyInjectionComponent,
     HelloWorldInterpolationComponent,
-    HelloWorldBindingsComponent
+    HelloWorldBindingsComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule

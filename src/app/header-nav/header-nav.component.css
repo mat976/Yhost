@@ -1,5 +1,5 @@
 
-.button-67 {
+.button-login {
   align-items: center;
   background: #f5f5fa;
   border: 0;
@@ -24,18 +24,35 @@
   width: max-content;
   word-break: normal;
   word-spacing: normal;
+  /* deplacer le bouton a droite */
+    margin-left: auto;
+
+    margin-right: 20px;
+
 }
 
-.button-67:hover {
+.button-login:hover {
   background: #f8f8ff;
   box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
 }
 
 @media (min-width: 768px) {
-  .button-67 {
+  .button-login {
     padding: 24px;
   }
 }
         
 
 /* Parent background */
+/* 
+    header baground = #F5F5FA
+*/
+header{
+    background: #F5F5FA;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}

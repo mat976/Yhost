@@ -1,88 +1,46 @@
-
-/* button-tab */
-
-
-.button-Signin {
-  align-items: center;
-  background: #f5f5fa;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
-  box-sizing: border-box;
-  color: #2a1f62;
-  cursor: pointer;
+.nav_top{
   display: flex;
-  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
-  font-size: 1rem;
-  justify-content: center;
-  line-height: 1.5rem;
-  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-width: var(--width-1);
+  z-index: 20;
+}
+
+.logbutton{
+  margin: 10px;
+}
+button {
+  margin: 10px;
+  outline: none;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
-  text-align: left;
-  transition: .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: pre;
-  width: max-content;
-  word-break: normal;
-  word-spacing: normal;
+  display: inline-block;
 }
 
-.button-Signin:hover {
-  background: #f8f8ff;
-  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+/* 1 */
+.btn-1 {
+  transition: all 0.3s ease;
+}
+.btn-1:hover {
+    box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
 }
 
-@media (min-width: 768px) {
-  .button-Signin {
-    padding: 24px;
-  }
+.logo{
+  padding: 10px 25px;
 }
-
-
-/* CSS */
-.button-Signup {
-    color: #2a1f62;
-    display: flex;
-    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
-    word-break: normal;
-    
-  border: 0;
-  border-radius: 8px;
-  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  padding: 15px;
-  transition: .2s;
-  background: #fff;
-
-}
-
-.button-Signup:hover {
-
-  background: #000;
-  opacity: .4;
-  background: blur(4px);
-  background-color: transparent;
-}
-
-@media (min-width: 768px) {
-  .button-Signup {
-    padding: 24px;
-  }
-}
-.button-tab{
-    /* mettre le tableau a droite */
-    margin-left: auto;
-    margin-top: auto;
-    scale: 0.8;
-}
-
-    
-
-
-
-
-
-

@@ -55,17 +55,14 @@
         
 .tab{
   /* place le tableau au millieu de la page */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 500px;
   border-spacing: 30px;
+  margin-top: 200px;
 }
 .parent {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%; /* pour s'adapter à la hauteur de la page */
 }
 
 /* Parent background */

@@ -47,16 +47,12 @@
 .button-tab{
     /* place le tableau au millieu de la page */
     margin: auto;
-
-
-    
-    
 }
         
 .tab{
   /* place le tableau au millieu de la page */
   border-spacing: 30px;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 .parent {
   display: flex;
@@ -64,5 +60,14 @@
   justify-content: center;
   height: 100%; /* pour s'adapter à la hauteur de la page */
 }
+.tab:first-child td{
+  padding-top: 30px;
+}
+/* ajout de l'espacement entre les cellules du bas */
+.tab:last-child td{
+  padding-bottom: 30px;
+}
 
-/* Parent background */
+.exemple text{
+  text-align: center;
+}

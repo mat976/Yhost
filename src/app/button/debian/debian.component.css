@@ -1,0 +1,61 @@
+p {
+    display: block;
+    color: gray;
+    font-size: 1.125rem;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  h3 {
+    color: black;
+    font-size: 2.027rem;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
+.button-style-splt {
+    align-items: center;
+    background: #f5f5fa;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+    box-sizing: border-box;
+    color: #2a1f62;
+    cursor: pointer;
+    display: flex;
+    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: 15px;
+    position: relative;
+    text-align: left;
+    transition: .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+    width: max-content;
+    word-break: normal;
+    word-spacing: normal;
+    display: block;
+    
+    width: 350px;
+    height: 300px;
+    
+  }
+  
+  .button-style-splt:hover {
+    background: #f8f8ff;
+    box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+  
+    
+  }
+  
+  @media (min-width: 768px) {
+    .button-style-splt {
+      padding: 24px;
+      
+    }
+  }

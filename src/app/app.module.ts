@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { Box1Component } from './box1/box1.component';
+import { WordPressComponent } from './button/word-press/word-press.component';
+import { DebianComponent } from './button/debian/debian.component';
 
 
 
@@ -12,7 +14,9 @@ import { Box1Component } from './box1/box1.component';
   declarations: [
     AppComponent,
     HeaderNavComponent,
-    Box1Component
+    Box1Component,
+    WordPressComponent,
+    DebianComponent
   ],
   imports: [
     BrowserModule,

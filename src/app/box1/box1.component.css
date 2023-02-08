@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 100%; /* pour s'adapter à la hauteur de la page */
+  justify-content: space-between;
+  /* reduit l'espace entre les élément */
+  flex-wrap: wrap;
+  margin-right: 25%;
+  margin-left: 25%;
   
 }
 

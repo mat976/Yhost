@@ -1,0 +1,6 @@
+body, html {
+    font-family: 'Work Sans', sans-serif;
+    cursor: default;
+    scroll-behavior: smooth;
+    background: var(--gray-4);
+}

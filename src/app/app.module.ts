@@ -7,16 +7,23 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { Box1Component } from './box1/box1.component';
 import { WordPressComponent } from './button/word-press/word-press.component';
 import { DebianComponent } from './button/debian/debian.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 
 // Import the AngularFire modules
 
 // Import the firebaseConfig from the environment
 import { environment } from '../environments/environment';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { SigninFormComponent } from './header-nav/signin-form/signin-form.component';
+import { SignupComponent } from './form/signup/signup.component';
 import { SigninComponent } from './form/signin/signin.component';
-import { LoginComponent } from './form/login/login.component';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -25,15 +32,23 @@ import { LoginComponent } from './form/login/login.component';
     Box1Component,
     WordPressComponent,
     DebianComponent,
-    SigninFormComponent,
-    SigninComponent,
-    LoginComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
+    provideFirebaseApp(() => initializeApp({ ...environment.firebaseConfig })),
+    provideFirestore(() => getFirestore()),
     BrowserModule,
+    MatToolbarModule,
+    MatCardModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideDatabase(() => getDatabase()),
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDialogModule,
+
 
   ],
   providers: [],

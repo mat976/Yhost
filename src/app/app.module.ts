@@ -14,6 +14,9 @@ import { DebianComponent } from './button/debian/debian.component';
 import { environment } from '../environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { SigninFormComponent } from './header-nav/signin-form/signin-form.component';
+import { SigninComponent } from './form/signin/signin.component';
+import { LoginComponent } from './form/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     HeaderNavComponent,
     Box1Component,
     WordPressComponent,
-    DebianComponent
+    DebianComponent,
+    SigninFormComponent,
+    SigninComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

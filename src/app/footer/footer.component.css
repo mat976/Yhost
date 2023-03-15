@@ -1,3 +1,6 @@
+footer{
+    margin-bottom: 0.5%;
+}
 .flexLogo{
     display: flex;
     margin: 0 3%;
@@ -45,7 +48,7 @@ h4{
     color: #B9CF3A;
     margin-left: 12%;
   }
-  
+
   .team2 {
     margin-left: 5%;
     color: #61B237;

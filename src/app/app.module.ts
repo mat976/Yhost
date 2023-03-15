@@ -19,12 +19,6 @@ import { MatCardModule } from '@angular/material/card';
 
 // Import the AngularFire modules
 
-// Import the firebaseConfig from the environment
-import { environment } from '../environments/environment';
-import { SignupComponent } from './form/signup/signup.component';
-import { SigninComponent } from './form/signin/signin.component';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -34,13 +28,9 @@ import { FooterComponent } from './footer/footer.component';
     Box1Component,
     WordPressComponent,
     DebianComponent,
-    SignupComponent,
-    SigninComponent,
     FooterComponent
   ],
   imports: [
-    provideFirebaseApp(() => initializeApp({ ...environment.firebaseConfig })),
-    provideFirestore(() => getFirestore()),
     BrowserModule,
     MatToolbarModule,
     MatCardModule,

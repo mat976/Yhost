@@ -80,6 +80,7 @@ input[type="radio"] {
   align-items: center;
   margin: 0 0 1rem 0;
   padding: 0;
+  /* #61B237 */
 }
 
 label {
@@ -102,7 +103,7 @@ hr {
 .Buy-button {
 
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #B9CF3A;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -137,6 +138,8 @@ hr {
 
 .Buy-button:hover {
   transform: translateY(-1px);
+  color: white;
+  background-color: black;
 }
 
 .Buy-button:active {

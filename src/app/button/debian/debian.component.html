@@ -7,35 +7,39 @@
             <p>Ram : </p> 
         
             <div class="selection">
-            <input type="radio" id="D_ram256" name="D_ram" value="256">
-            <label for="D_ram256"><p>256 MB</p></label>
+                <input type="radio" id="D_ram256" name="D_ram" value="256" (change)="calculatePrice()" [(ngModel)]="ramValue">
+                <label for="D_ram256"><p>256 MB</p></label>
             
-            <input type="radio" id="D_ram512" name="D_ram" value="512">
-            <label for="D_ram512"><p>512 MB</p></label>
+                <input type="radio" id="D_ram512" name="D_ram" value="512" (change)="calculatePrice()" [(ngModel)]="ramValue">
+                <label for="D_ram512"><p>512 MB</p></label>
             
-            <input type="radio" id="D_ram1000" name="D_ram" value="1000">
-            <label for="D_ram1000"><p>1 GB</p></label>
+                <input type="radio" id="D_ram1000" name="D_ram" value="1000" (change)="calculatePrice()" [(ngModel)]="ramValue">
+                <label for="D_ram1000"><p>1 GB</p></label>
             
-            <input type="radio" id="D_ram2000" name="D_ram" value="2000">
-            <label for="D_ram2000"><p>2 GB</p></label>
+                <input type="radio" id="D_ram2000" name="D_ram" value="2000" (change)="calculatePrice()" [(ngModel)]="ramValue">
+                <label for="D_ram2000"><p>2 GB</p></label>
             </div> 
         </div>
         <div class="Ram_selection">
             <p>Storage : </p>
         
             <div class="selection">
-            <input type="radio" id="D_memory256GB" name="D_memory" value="256">
-            <label for="D_memory256GB"><p>256 GB</p></label>
+                <input type="radio" id="D_memory256GB" name="D_memory" value="256" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+                <label for="D_memory256GB"><p>256 GB</p></label>
             
-            <input type="radio" id="D_memory512GB" name="D_memory" value="512">
-            <label for="D_memory512GB"><p>512 GB</p></label>
+                <input type="radio" id="D_memory512GB" name="D_memory" value="512" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+                <label for="D_memory512GB"><p>512 GB</p></label>
             
-            <input type="radio" id="D_memory1TO" name="D_memory" value="1000">
-            <label for="D_memory1TO"><p>1 TO</p></label>
+                <input type="radio" id="D_memory1TO" name="D_memory" value="1000" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+                <label for="D_memory1TO"><p>1 TO</p></label>
             </div> 
         </div>
         <hr>
+      <div class="order">        
         <p>Price :</p>
-
+        <p class="price">{{ price | currency:'USD':true:'1.2-2' }}</p>
+      </div>
+      <button class="Buy-button" (click)="deploy()">ORDER</button>
     </div>
-</section>
+  </section>
+  

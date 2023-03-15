@@ -1,40 +1,38 @@
 <section>
     <div class="button-style-splt">
-        <h3>WordPress</h3>
-        <p>Simple WordPress Hosting</p>
-        <hr>
-        <div class="Ram_selection">
-            <p>Ram : </p> 
-        
-            <div class="selection">
-            <input type="radio" id="W_ram256" name="W_ram" value="256">
-            <label for="W_ram256"><p>256 MB</p></label>
-            
-            <input type="radio" id="W_ram512" name="W_ram" value="512">
-            <label for="W_ram512"><p>512 MB</p></label>
-            
-            <input type="radio" id="W_ram1000" name="W_ram" value="1000">
-            <label for="W_ram1000"><p>1 GB</p></label>
-            
-            <input type="radio" id="W_ram2000" name="W_ram" value="2000">
-            <label for="W_ram2000"><p>2 GB</p></label>
-            </div> 
-        </div>
-        <div class="Ram_selection">
-            <p>Storage : </p>
-        
-            <div class="selection">
-            <input type="radio" id="W_memory256GB" name="W_memory" value="256">
-            <label for="W_memory256GB"><p>256 GB</p></label>
-            
-            <input type="radio" id="W_memory512GB" name="W_memory" value="512">
-            <label for="W_memory512GB"><p>512 GB</p></label>
-            
-            <input type="radio" id="W_memory1TO" name="W_memory" value="1000">
-            <label for="W_memory1TO"><p>1 TO</p></label>
-            </div> 
-        </div>
-        <hr>
+      <h3>WordPress</h3>
+      <p>Simple WordPress Hosting</p>
+      <hr>
+      <div class="Ram_selection">
+        <p>Ram : </p> 
+        <div class="selection">
+          <input type="radio" id="W_ram256" name="W_ram" value="256" (change)="calculatePrice()" [(ngModel)]="ramValue">
+          <label for="W_ram256"><p>256 MB</p></label>
+          <input type="radio" id="W_ram512" name="W_ram" value="512" (change)="calculatePrice()" [(ngModel)]="ramValue">
+          <label for="W_ram512"><p>512 MB</p></label>
+          <input type="radio" id="W_ram1000" name="W_ram" value="1000" (change)="calculatePrice()" [(ngModel)]="ramValue">
+          <label for="W_ram1000"><p>1 GB</p></label>
+          <input type="radio" id="W_ram2000" name="W_ram" value="2000" (change)="calculatePrice()" [(ngModel)]="ramValue">
+          <label for="W_ram2000"><p>2 GB</p></label>
+        </div> 
+      </div>
+      <div class="Ram_selection">
+        <p>Storage : </p>
+        <div class="selection">
+          <input type="radio" id="W_memory256GB" name="W_memory" value="256" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+          <label for="W_memory256GB"><p>256 GB</p></label>
+          <input type="radio" id="W_memory512GB" name="W_memory" value="512" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+          <label for="W_memory512GB"><p>512 GB</p></label>
+          <input type="radio" id="W_memory1TO" name="W_memory" value="1000" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+          <label for="W_memory1TO"><p>1 TO</p></label>
+        </div> 
+      </div>
+      <hr>
+      <div class="order">        
         <p>Price :</p>
+        <p class="price">{{ price | currency:'USD':true:'1.2-2' }}</p>
+      </div>
+      <button class="Buy-button" (click)="deploy()">ORDER</button>
     </div>
-</section>
+  </section>
+  

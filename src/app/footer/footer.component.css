@@ -1,7 +1,5 @@
 .flexLogo{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 3%;
 
 }
@@ -28,12 +26,32 @@
   align-items: center;
 }
 
-.team{
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+h4{
+    color: #4b4b4b;
+}
+
+.t{
+    color: black;
+    font-weight: bold;
+    padding-top: 0.5%;
     text-align: center;
-    display: block;
 }
+  .team {
+    color: #B9CF3A;
+    margin-left: 12%;
+  }
+  
+  .team2 {
+    margin-left: 5%;
+    color: #61B237;
+  }
 
-.team2{
-    text-align: right;
-}
-
+  .choix{
+    margin-left: 18%;
+    font-weight: bold;
+  }

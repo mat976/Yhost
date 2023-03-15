@@ -1,0 +1,11 @@
+hr {
+    height: 0;
+    color: black;
+    border-top-width: 2px;
+    margin: 0;
+    border-color: black;
+}
+
+  .flex-1 {
+    flex: 1 1 0%;
+}

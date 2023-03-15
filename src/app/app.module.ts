@@ -25,6 +25,7 @@ import { SignupComponent } from './form/signup/signup.component';
 import { SigninComponent } from './form/signin/signin.component';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     WordPressComponent,
     DebianComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    FooterComponent
   ],
   imports: [
     provideFirebaseApp(() => initializeApp({ ...environment.firebaseConfig })),

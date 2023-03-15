@@ -30,9 +30,9 @@ export class DebianComponent {
     };
 
     const memoryPrices: MemoryPrices = {
-      '256': 5,
-      '512': 10,
-      '1000': 15,
+      '1': 5,
+      '2': 10,
+      '3': 15,
     };
 
     const ramPrice = ramPrices[this.ramValue];

@@ -19,12 +19,14 @@
       <div class="Ram_selection">
         <p>Storage : </p>
         <div class="selection">
-          <input type="radio" id="W_memory256GB" name="W_memory" value="256" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-          <label for="W_memory256GB"><p>256 GB</p></label>
-          <input type="radio" id="W_memory512GB" name="W_memory" value="512" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-          <label for="W_memory512GB"><p>512 GB</p></label>
-          <input type="radio" id="W_memory1TO" name="W_memory" value="1000" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-          <label for="W_memory1TO"><p>1 TO</p></label>
+            <input type="radio" id="W_cpu1" name="W_cpu" value="1" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+            <label for="W_cpu1"><p>1</p></label>
+        
+            <input type="radio" id="W_cpu2" name="W_cpu" value="2" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+            <label for="W_cpu512GB"><p>2</p></label>
+        
+            <input type="radio" id="W_cpu3" name="W_cpu" value="3" (change)="calculatePrice()" [(ngModel)]="memoryValue">
+            <label for="W_cpu1TO"><p>3</p></label>
         </div> 
       </div>
       <hr>

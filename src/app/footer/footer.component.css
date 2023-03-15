@@ -1,11 +1,13 @@
-hr {
-    height: 0;
-    color: black;
-    border-top-width: 2px;
-    margin: 0;
-    border-color: black;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-  .flex-1 {
-    flex: 1 1 0%;
+.line {
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  margin: 0;
+  border: none;
+  align-items: center;
 }

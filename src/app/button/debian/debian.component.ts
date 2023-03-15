@@ -41,10 +41,16 @@ export class DebianComponent {
   }
 
   deploy() {
+    const ram = (document.querySelector('input[name="W_ram"]:checked') as HTMLInputElement)?.value;
+    if (!ram) {
+      console.log('Please select a RAM value');
+      return;
+    }
+    
     const cpu = '1'; // valeur fixe
     const serverUrl = 'http://your-server-url.com'; // l'URL de votre serveur
   
-    const command = `sh script_deploy_debian_11.sh --name=test_1 --cpu=${cpu} --ram=${this.ramValue}`;
+    const command = `sh script_deploy_debian_11.sh --name=test_1 --cpu=${cpu} --ram=${ram}`;
     const requestBody = { command };
   
     this.http.post(serverUrl, requestBody).subscribe(

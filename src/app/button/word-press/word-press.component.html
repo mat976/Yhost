@@ -3,7 +3,7 @@
       <h3>WordPress</h3>
       <p>Simple WordPress Hosting</p>
       <hr>
-      <div class="Ram_selection">
+      <div class="selection">
         <p>Ram : </p> 
         <div class="selection">
           <input type="radio" id="W_ram256" name="W_ram" value="256" (change)="calculatePrice()" [(ngModel)]="ramValue">
@@ -16,17 +16,17 @@
           <label for="W_ram2000"><p>2 GB</p></label>
         </div> 
       </div>
-      <div class="Ram_selection">
-        <p>Storage : </p>
+      <div class="selection">
+        <p>CPU : </p>
         <div class="selection">
-            <input type="radio" id="W_cpu1" name="W_cpu" value="1" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-            <label for="W_cpu1"><p>1</p></label>
+            <input type="radio" id="W_cpu1" name="W_cpu" value="1" (change)="calculatePrice()" [(ngModel)]="cpuValue">
+            <label for="W_cpu1"><p>1 CPU</p></label>
         
-            <input type="radio" id="W_cpu2" name="W_cpu" value="2" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-            <label for="W_cpu512GB"><p>2</p></label>
+            <input type="radio" id="W_cpu2" name="W_cpu" value="2" (change)="calculatePrice()" [(ngModel)]="cpuValue">
+            <label for="W_cpu2"><p>2 CPU</p></label>
         
-            <input type="radio" id="W_cpu3" name="W_cpu" value="3" (change)="calculatePrice()" [(ngModel)]="memoryValue">
-            <label for="W_cpu1TO"><p>3</p></label>
+            <input type="radio" id="W_cpu3" name="W_cpu" value="3" (change)="calculatePrice()" [(ngModel)]="cpuValue">
+            <label for="W_cpu3"><p>3 CPU</p></label>
         </div> 
       </div>
       <hr>

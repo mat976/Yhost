@@ -59,7 +59,7 @@ h3 {
     
     }
 }
-.Ram_selection{
+.selection{
     display: flex;
     flex-direction: row;
     align-items: center;

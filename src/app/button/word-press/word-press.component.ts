@@ -5,7 +5,7 @@ interface RamPrices {
   [key: string]: number;
 }
 
-interface MemoryPrices {
+interface CpuPrices {
   [key: string]: number;
 }
 
@@ -16,7 +16,7 @@ interface MemoryPrices {
 })
 export class WordPressComponent {
   ramValue: string = '';
-  memoryValue: string = '';
+  cpuValue: string = '';
   price: number = 0;
 
   constructor(private http: HttpClient) {}
@@ -29,22 +29,21 @@ export class WordPressComponent {
       '2000': 40,
     };
 
-    const memoryPrices: MemoryPrices = {
+    const CpuPrices: CpuPrices = {
       '1': 5,
       '2': 10,
       '3': 15,
     };
 
     const ramPrice = ramPrices[this.ramValue];
-    const memoryPrice = memoryPrices[this.memoryValue];
-    this.price = ramPrice + memoryPrice;
+    const cpuPrice = CpuPrices[this.cpuValue];
+    this.price = ramPrice + cpuPrice;
   }
 
   deploy() {
-    const cpu = '1'; // valeur fixe
     const serverUrl = 'http://your-server-url.com'; // l'URL de votre serveur
   
-    const command = `sh script_deploy_debian_11.sh --name=test_1 --cpu=${cpu} --ram=${this.ramValue}`;
+    const command = `sh script_deploy_debian_11.sh --name=test_1 --cpu=${this.cpuValue} --ram=${this.ramValue}`;
     const requestBody = { command };
   
     this.http.post(serverUrl, requestBody).subscribe(

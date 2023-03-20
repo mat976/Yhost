@@ -5,7 +5,7 @@ interface RamPrices {
   [key: string]: number;
 }
 
-interface MemoryPrices {
+interface CpuPrices {
   [key: string]: number;
 }
 
@@ -16,7 +16,7 @@ interface MemoryPrices {
 })
 export class DebianComponent {
   ramValue: string = '';
-  memoryValue: string = '';
+  cpuValue: string = '';
   price: number = 0;
 
   constructor(private http: HttpClient) {}
@@ -29,15 +29,15 @@ export class DebianComponent {
       '2000': 45,
     };
 
-    const memoryPrices: MemoryPrices = {
+    const CpuPrices: CpuPrices = {
       '1': 5,
       '2': 10,
       '3': 15,
     };
 
     const ramPrice = ramPrices[this.ramValue];
-    const memoryPrice = memoryPrices[this.memoryValue];
-    this.price = ramPrice + memoryPrice;
+    const CpuPrice = CpuPrices[this.cpuValue];
+    this.price = ramPrice + CpuPrice;
   }
 
   deploy() {

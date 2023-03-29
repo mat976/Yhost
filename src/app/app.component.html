@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
-
-<body>
-    <app-header-nav>
-        <ng-content select=".header"></ng-content>
-    </app-header-nav>
-    <app-box1>
-        <ng-content select=".body"></ng-content>
-    </app-box1>
-
-    <app-footer></app-footer>
-</body>
-
-
-
+    <body>
+        <app-header-nav>
+            <ng-content select=".header"></ng-content>
+        </app-header-nav>
+        <section id="home">
+        <app-box1>
+            <ng-content select=".body"></ng-content>
+        </app-box1>
+        </section>
+        <div class="parent">
+            <section id="team" style="display: flex; justify-content: center;">
+                <h1>Team</h1>
+            </section>
+            <section id="price" style="display: flex; justify-content: center;">
+                <h1>Pricing Debian</h1>
+                <img class="tableau" src="assets/images/tableau.png" height="800px" width="1000px"/>
+            </section>
+            <section id="price" style="display: flex; justify-content: center;">
+                <h1>Pricing Wordpress</h1>
+                <img class="tableau" src="assets/images/tableau.png" height="800px" width="1000px"/>
+            </section>
+        </div>
+        <app-footer></app-footer>
+    </body>
 </html>

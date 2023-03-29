@@ -107,6 +107,7 @@ body {
 .link--metis {
   font-family: bely-display, sans-serif;
   text-transform: lowercase;
+  text-decoration: none;
 }
 
 .link--metis::before {

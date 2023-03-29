@@ -44,17 +44,31 @@ h4{
     padding-top: 0.5%;
     text-align: center;
 }
-  .team {
+.team {
     color: #B9CF3A;
-    margin-left: 12%;
+    margin-left: 13%;
+    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
   }
 
-  .team2 {
+.team2 {
     margin-left: 5%;
     color: #61B237;
+    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
   }
 
   .choix{
+    color: #417526;
     margin-left: 18%;
     font-weight: bold;
+    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  }
+  
+  .choix a {
+    color: #417526;
+    text-decoration: none;
+    padding-right: 50px; /* Ajoute un espace de 50px à droite de chaque lien */
+  }
+  
+  .choix a:hover {
+    text-decoration: underline;
   }

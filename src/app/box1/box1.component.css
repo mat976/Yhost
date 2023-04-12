@@ -9,7 +9,7 @@
   margin-right: 25%;
   margin-left: 25%;
   margin-bottom: 5%;
-  
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
 }
 p {
   display: block;

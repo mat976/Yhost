@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 interface RamPrices {
   [key: string]: number;
 }
@@ -42,12 +43,13 @@ export class WordPressComponent {
   
 
   deploy() {
-    const serverUrl = '192.168.120.191'; // l'URL de votre serveur
+    const host = '192.168.120.191';
+    const username = 'user';
+    const command = `sh script_deploy_debian_11.sh --name=test1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
   
-    const command = `sh script_deploy_debian_11.sh --name=test_1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
-    const requestBody = { command };
+    const sshCommand = `echo "${command}" | ssh ${username}@${host}`;
   
-    this.http.post(serverUrl, requestBody).subscribe(
+    this.http.get(sshCommand).subscribe(
       (response) => {
         console.log('Command sent successfully:', response);
       },
@@ -56,4 +58,5 @@ export class WordPressComponent {
       }
     );
   }
+  
 }

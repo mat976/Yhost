@@ -16,7 +16,7 @@ interface CpuPrices {
 })
 export class DebianComponent {
   ramValue: string = '';
-  cpuValue: string = '';
+  memoryValue: string = '';
   price: number = 0;
 
   constructor(private http: HttpClient) {}
@@ -36,7 +36,7 @@ export class DebianComponent {
     };
 
     const ramPrice = ramPrices[this.ramValue];
-    const CpuPrice = CpuPrices[this.cpuValue];
+    const CpuPrice = CpuPrices[this.memoryValue];
     this.price = ramPrice + CpuPrice;
   }
 

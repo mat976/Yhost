@@ -44,7 +44,7 @@ export class WordPressComponent {
 
   deploy() {
     const host = '192.168.120.191';
-    const username = 'user';
+    const username = 'root';
     const command = `sh script_deploy_debian_11.sh --name=test1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
   
     const sshCommand = `echo "${command}" | ssh ${username}@${host}`;

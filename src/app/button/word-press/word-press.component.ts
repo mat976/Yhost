@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import * as ssh2 from 'ssh2';
 
 interface RamPrices {
   [key: string]: number;
@@ -41,23 +41,36 @@ export class WordPressComponent {
     this.price = ramPrice + cpuPrice;
   }
   
-
   deploy() {
     const host = '192.168.120.191';
     const username = 'root';
+    const password = '54xt7Tv7Ljc3SE57HnFv5vN';
     const command = `sh script_deploy_debian_11.sh --name=test1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
   
-    const sshCommand = `echo "${command}" | ssh ${username}@${host}`;
-  
-    this.http.get(sshCommand).subscribe(
-      (response) => {
-        console.log('Command sent successfully:', response);
-      },
-      (error) => {
-        console.error('Error sending command:', error);
-      }
-    );
-    return;
+    const conn = new ssh2.Client();
+    conn.on('ready', () => {
+      conn.exec(command, (err, stream) => {
+        if (err) {
+          console.error('Error executing command:', err);
+        }
+        stream.on('close', (code: any, signal: any) => {
+          console.log(`Command finished with code ${code} and signal ${signal}`);
+          conn.end();
+        }).on('data', (data: { toString: () => any; }) => {
+          console.log('STDOUT:', data.toString());
+        }).stderr.on('data', (data) => {
+          console.error('STDERR:', data.toString());
+        });
+      });
+    }).on('error', (err) => {
+      console.error('SSH connection error:', err);
+    }).connect({
+      host,
+      port: 22,
+      username,
+      password
+    });
   }
+  
   
 }

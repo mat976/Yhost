@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 
+
 // Import the AngularFire modules
 
 import { FooterComponent } from './footer/footer.component';

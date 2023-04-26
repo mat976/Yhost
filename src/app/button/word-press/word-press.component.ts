@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ChildProcess, spawn } from 'child_process';
 
 interface RamPrices {
   [key: string]: number;

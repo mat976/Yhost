@@ -43,8 +43,12 @@ export class WordPressComponent {
   
   deploy() {
     const host = '192.168.120.191';
+<<<<<<< HEAD
     const username = 'root';
     const password = '54xt7Tv7Ljc3SE57HnFv5vN';
+=======
+    const username = 'user';
+>>>>>>> parent of 5706fca (test 3)
     const command = `sh script_deploy_debian_11.sh --name=test1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
   
     const conn = new ssh2.Client();

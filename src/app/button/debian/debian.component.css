@@ -30,7 +30,7 @@ h3 {
   justify-content: center;
   line-height: 1.5rem;
   padding: 15px;
-  position: relative;
+  position: center;
   text-align: left;
   transition: .2s;
   user-select: none;
@@ -42,8 +42,8 @@ h3 {
   word-spacing: normal;
   display: block;
 
-  width: fit-content;
-  height: fit-content;
+  width: 400px;
+  height: 480px;
 }
 
 .button-style-splt:hover {
@@ -127,6 +127,8 @@ hr {
   touch-action: manipulation;
   vertical-align: baseline;
   width: 100%;
+
+
 }
 
 .Buy-button:hover,

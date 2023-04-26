@@ -57,6 +57,7 @@ export class WordPressComponent {
         console.error('Error sending command:', error);
       }
     );
+    return;
   }
   
 }

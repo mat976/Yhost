@@ -44,7 +44,7 @@ export class WordPressComponent {
   deploy() {
     const host = '192.168.120.191';
 <<<<<<< HEAD
-    const username = 'root';
+    const username = 'user';
     const password = '54xt7Tv7Ljc3SE57HnFv5vN';
 =======
     const username = 'user';

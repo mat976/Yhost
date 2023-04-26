@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import * as ssh2 from 'ssh2';
+import { ChildProcess, spawn } from 'child_process';
 
 interface RamPrices {
   [key: string]: number;
@@ -41,40 +41,16 @@ export class WordPressComponent {
     this.price = ramPrice + cpuPrice;
   }
   
-  deploy() {
-    const host = '192.168.120.191';
-<<<<<<< HEAD
-    const username = 'user';
-    const password = '54xt7Tv7Ljc3SE57HnFv5vN';
-=======
-    const username = 'user';
->>>>>>> parent of 5706fca (test 3)
-    const command = `sh script_deploy_debian_11.sh --name=test1 --cpu=${this.memoryValue} --ram=${this.ramValue}`;
-  
-    const conn = new ssh2.Client();
-    conn.on('ready', () => {
-      conn.exec(command, (err, stream) => {
-        if (err) {
-          console.error('Error executing command:', err);
+
+    deploy() {
+      const url = 'http://localhost:3000/deploy';
+      this.http.post(url, {}).subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.error(err);
         }
-        stream.on('close', (code: any, signal: any) => {
-          console.log(`Command finished with code ${code} and signal ${signal}`);
-          conn.end();
-        }).on('data', (data: { toString: () => any; }) => {
-          console.log('STDOUT:', data.toString());
-        }).stderr.on('data', (data) => {
-          console.error('STDERR:', data.toString());
-        });
-      });
-    }).on('error', (err) => {
-      console.error('SSH connection error:', err);
-    }).connect({
-      host,
-      port: 22,
-      username,
-      password
-    });
+      );
+    }
   }
-  
-  
-}
